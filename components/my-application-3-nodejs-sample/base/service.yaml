@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: my-application-3-nodejs-sample
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: my-application-3-nodejs-sample
+    app.kubernetes.io/part-of: my-application-3
+  name: my-application-3-nodejs-sample
+  namespace: pshivpuj
+spec:
+  ports:
+  - port: 3001
+    targetPort: 3001
+  selector:
+    app.kubernetes.io/instance: my-application-3-nodejs-sample
+status:
+  loadBalancer: {}
